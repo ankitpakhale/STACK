@@ -1,5 +1,5 @@
 # Project Architecture
-![Stock Market Kafka Architecture](StockMarketKafkaArchitecture.jpg)
+![Stock Market Kafka AWS Simulation Architecture](StockMarketKafkaAWSSimulationArchitecture.jpg)
 
 # Installation
 1. Clone the repository:
