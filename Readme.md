@@ -1,5 +1,5 @@
 # Project Architecture
-![Stock Market Kafka Architecture](StockMarketKafkaArchitecture.png)
+![Stock Market Kafka Architecture](StockMarketKafkaArchitecture.jpg)
 
 # Installation
 1. Clone the repository:
