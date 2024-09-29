@@ -1,3 +1,6 @@
+# Project Architecture
+![Stock Market Kafka Architecture](StockMarketKafkaArchitecture.png)
+
 # Installation
 1. Clone the repository:
    ```bash
