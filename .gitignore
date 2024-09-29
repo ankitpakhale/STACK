@@ -46,3 +46,9 @@ zookeeper-data/
 
 # Ignore package dependencies
 node_modules/
+
+
+# Others
+docs.txt
+EC2
+*.pem
