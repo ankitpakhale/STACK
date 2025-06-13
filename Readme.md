@@ -1,14 +1,14 @@
 # Project Architecture
-![Stock Market Kafka AWS Simulation Architecture](StockMarketKafkaAWSSimulationArchitecture.jpg)
+![STACK Architecture](STACKArchitecture.jpg)
 
 # Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ankitpakhale/StockMarket-Kafka-AWS-Simulation.git
+   git clone https://github.com/ankitpakhale/STACK.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd StockMarket-Kafka-AWS-Simulation
+   cd STACK
    ```
 3. Create a virtual environment:
 	```bash
@@ -31,7 +31,7 @@
 # Project Flow
 - **Dataset (CSV file)**: A stock market dataset is used as the input.
   
-- **Stock Market App Simulation (Python)**: The stock market simulation app in Python reads the dataset and acts as the producer.
+- **STACK (Python)**: The stock market simulation app in Python reads the dataset and acts as the producer.
   
 - **SDK (Boto3)**: The Python script uses the AWS Boto3 SDK to interact with AWS services.
 
@@ -47,7 +47,7 @@
 
 - **Amazon Athena**: Amazon Athena is used to run SQL queries against the data stored in the S3 bucket, leveraging the Glue Data Catalog for schema information.
 
-	
+
 # To run project on EC2
 - Create new t2.micro machine
 - Download .pem file
@@ -161,5 +161,7 @@
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
-# License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+# 🔐 License
+This project is licensed under a **modified MIT License with restrictions**.
+**Permission must be obtained from ANKIT PAKHALE ([akp3067@gmail.com](mailto:akp3067@gmail.com)) before using, copying, modifying, or distributing this software.**
+See the [LICENSE](LICENSE) file for full details.
