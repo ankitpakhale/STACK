@@ -29,34 +29,34 @@
 	```
 	
 # Project Flow
-- **Dataset (CSV file)**: A stock market dataset is used as the input.
+- **Dataset (CSV file)**: A *stock market dataset* is used as the input.
   
-- **STACK (Python)**: The stock market simulation app in Python reads the dataset and acts as the producer.
+- **STACK (Python)**: The **STACK** application in `Python` reads the dataset and acts as the `producer`.
   
-- **SDK (Boto3)**: The Python script uses the AWS Boto3 SDK to interact with AWS services.
+- **SDK (Boto3)**: The **Python script** uses the `AWS Boto3 SDK` to interact with `AWS services`.
 
 - **Kafka (Producer/Consumer)**: 
-  - The stock market app acts as the producer, sending messages to Kafka hosted on an Amazon EC2 instance/Local Machine.
-  - Kafka then sends the data to consumers for processing.
+  - The **STACK** application acts as the `producer`, sending messages to `Kafka` hosted on an `Amazon EC2 instance`/`Local Machine`.
+  - `Kafka` then sends the data to `consumers` for *processing*.
 
-- **Amazon S3**: The Kafka consumer writes the data to an Amazon S3 bucket.
+- **Amazon S3**: The `Kafka consumer` writes the data to an `Amazon S3 bucket`.
 
-- **AWS Glue Crawler**: A crawler in AWS Glue scans the data in S3, extracting metadata and building a data catalog.
+- **AWS Glue Crawler**: A *crawler* in `AWS Glue scans` the data in `S3`, extracting *metadata* and building a data catalog.
 
-- **AWS Glue Data Catalog**: This metadata is stored in the AWS Glue Data Catalog, providing a structured way to access the data.
+- **AWS Glue Data Catalog**: This metadata is stored in the `AWS Glue` Data Catalog, providing a structured way to *access the data*.
 
-- **Amazon Athena**: Amazon Athena is used to run SQL queries against the data stored in the S3 bucket, leveraging the Glue Data Catalog for schema information.
+- **Amazon Athena**: `Amazon Athena` is used to run `SQL` queries against the data stored in the `S3 bucket`, leveraging the **Glue Data Catalog** for *schema* information.
 
 
 # To run project on EC2
-- Create new t2.micro machine
-- Download .pem file
-- Run this command: chmod 400 kafka-stock-market-project.pem
+- Create new `t2.micro` machine
+- Download `.pem file`
+- Run this command: `chmod 400 kafka-stock-market-project.pem`
 
 
 ## Download Kafka:
-- Open new terminal
-- Connect to EC2 using .pem file 
+- Open new `terminal`
+- Connect to `EC2 using .pem file` 
 -
 	```bash
 	wget https://downloads.apache.org/kafka/3.3.1/kafka_2.13-3.6.2.tgz
@@ -67,8 +67,8 @@
 	```
 
 ## Start the Zookeeper:
-- Open new terminal
-- Connect to EC2 using .pem file 
+- Open new `terminal`
+- Connect to `EC2 using .pem file` 
 - 
 	```bash
 	cd kafka_2.13-3.6.2
@@ -79,8 +79,8 @@
 	```
 
 ## Start the kafka Server:
-- Open new terminal
-- Connect to EC2 using .pem file
+- Open new `terminal`
+- Connect to `EC2 using .pem file`
 - 
 	```bash
 	cd kafka_2.13-3.6.2
@@ -91,8 +91,8 @@
 	```
 
 ## Create the topic:
-- Open new terminal
-- Connect to EC2 using .pem file 
+- Open new `terminal`
+- Connect to `EC2 using .pem file` 
 - 
 	```bash
 	cd kafka_2.13-3.6.2
@@ -104,18 +104,16 @@
 - **Note:** Do not forget to change the topic name, currently it is  **demo_testing2**
 
 ## Start Producer & Consumer:
-- Rename .env_example to .env and update the bucket name 
-- Open new terminal
-- jupyter notebook
-- Change localhost to public IP of EC2 Instance in Create Kafka Producer section in KafkaProducer.ipynb file and run it. 
-- Change localhost to public IP of EC2 Instance in Create Kafka Consumer section in KafkaConsumer.ipynb file and run it. 
-
-
+- Rename `.env_example` to `.env` and update the **bucket name** 
+- Open new `terminal`
+- `jupyter notebook`
+- Change `localhost` to *public IP* of `EC2 Instance` in Create `Kafka Producer` section in `KafkaProducer.ipynb` file and **run** it. 
+- Change `localhost` to *public IP* of `EC2 Instance` in Create `Kafka Consumer` section in `KafkaConsumer.ipynb` file and **run** it. 
 
 # To run project on local machine
 
 ## Start the Zookeeper:
-- Open new terminal
+- Open new `terminal`
 - 
 	```bash
 	cd kafka_2.13-3.6.2
@@ -126,7 +124,7 @@
 	```
 
 ## Start the Kafka Server:
-- Open new terminal
+- Open new `terminal`
 - 
 	```bash
 	cd kafka_2.13-3.6.2
@@ -137,22 +135,22 @@
 	```
 
 ## Start Producer & Consumer:
-- Rename .env_example to .env and update the bucket name
-- Open new terminal
-- jupyter notebook
-- run KafkaProducer.ipynb
-- run KafkaConsumer.ipynb
+- Rename `.env_example` to `.env` and update the **bucket name** 
+- Open new `terminal`
+- `jupyter notebook`
+- run `KafkaProducer.ipynb`
+- run `KafkaConsumer.ipynb`
 
 
 # Create Crawler
-- Create Crawler and assign permissions to access S3 bucket.
-- Create database to store data.
-- Run the Crawler.
+- Create `Crawler` and *assign permissions* to access `S3 bucket`.
+- Create `database` to *store data*.
+- **Run** the `Crawler`.
 
 # Athena
-- Go to Athena Console.
-- Select Database name.
-- Run the Athena Query.
+- Go to `Athena Console`.
+- Select `Database` name.
+- **Run** the `Athena Query`.
 
 # Contributing
 1. Fork the repository.
